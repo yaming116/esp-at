@@ -6,6 +6,8 @@ on:
     branches:
       - master
       - release/*
+  watch:
+    types: started
 
 jobs:
   build-esp32-wroom-at:
