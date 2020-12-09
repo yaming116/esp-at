@@ -183,14 +183,14 @@ config AT_I2S_DATA_PIN
 
 config AT_ETHERNET_SUPPORT
     bool "AT ethernet support."
-    default "n"
+    default "y"
     depends on AT_ENABLE
     help
         Please pay attention to the usage. You can refer to the ESP32_AT_Ethernet.md and get more details.
     
 choice PHY_MODEL
     prompt "Ethernet PHY"
-    default CONFIG_PHY_IP101
+    default CONFIG_PHY_LAN8720
     depends on AT_ETHERNET_SUPPORT
     help
         Select the PHY driver to use for ESP32 AT.
